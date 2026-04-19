@@ -2,7 +2,7 @@
     "author": "Reece Holland",
     "company": "Mining Automation Pty",
     "description": "Full autonomous underground loader system configuration including vehicle, perception, localisation, and control subsystems.",
-    "gitCommitHash": "",
+    "gitCommitHash": "02b393a",
     "gitManaged": true,
     "lastModified": "2026-04-19T19:05:12",
     "projectName": "UGLoader_Autonomy",
