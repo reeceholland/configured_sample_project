@@ -1,0 +1,308 @@
+{
+    "author": "Reece Holland",
+    "company": "Mining Automation Pty",
+    "description": "Full autonomous underground loader system configuration including vehicle, perception, localisation, and control subsystems.",
+    "gitCommitHash": "",
+    "gitManaged": true,
+    "lastModified": "2026-04-19T19:05:12",
+    "projectName": "UGLoader_Autonomy",
+    "robotPlatform": "Underground Loader",
+    "root": {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                ],
+                                "description": "Distance between front and rear axles.",
+                                "name": "Wheelbase",
+                                "parameterKey": "wheelbase",
+                                "parameterUnit": "m",
+                                "parameterValue": "3.2",
+                                "required": true,
+                                "type": "Parameter"
+                            },
+                            {
+                                "children": [
+                                ],
+                                "description": "Overall machine width.",
+                                "name": "Width",
+                                "parameterKey": "width",
+                                "parameterUnit": "m",
+                                "parameterValue": "2.9",
+                                "required": true,
+                                "type": "Parameter"
+                            },
+                            {
+                                "children": [
+                                ],
+                                "description": "Maximum machine height.",
+                                "name": "Height",
+                                "parameterKey": "height",
+                                "parameterUnit": "m",
+                                "parameterValue": "2.4",
+                                "required": true,
+                                "type": "Parameter"
+                            }
+                        ],
+                        "description": "Mechanical chassis properties.",
+                        "name": "Chassis",
+                        "parameterKey": "",
+                        "parameterUnit": "",
+                        "parameterValue": "",
+                        "required": false,
+                        "type": "Component"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                ],
+                                "description": "Maximum vehicle speed.",
+                                "name": "MaxSpeed",
+                                "parameterKey": "max_speed",
+                                "parameterUnit": "m/s",
+                                "parameterValue": "3.0",
+                                "required": true,
+                                "type": "Parameter"
+                            },
+                            {
+                                "children": [
+                                ],
+                                "description": "Maximum acceleration.",
+                                "name": "MaxAcceleration",
+                                "parameterKey": "max_accel",
+                                "parameterUnit": "m/s^2",
+                                "parameterValue": "1.2",
+                                "required": true,
+                                "type": "Parameter"
+                            }
+                        ],
+                        "description": "Drive system parameters.",
+                        "name": "DriveTrain",
+                        "parameterKey": "",
+                        "parameterUnit": "",
+                        "parameterValue": "",
+                        "required": false,
+                        "type": "Component"
+                    }
+                ],
+                "description": "Physical vehicle configuration.",
+                "name": "Vehicle",
+                "parameterKey": "",
+                "parameterUnit": "",
+                "parameterValue": "",
+                "required": false,
+                "type": "Subsystem"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                ],
+                                "description": "Maximum sensing range.",
+                                "name": "Range",
+                                "parameterKey": "lidar_range",
+                                "parameterUnit": "m",
+                                "parameterValue": "100",
+                                "required": true,
+                                "type": "Parameter"
+                            },
+                            {
+                                "children": [
+                                ],
+                                "description": "Scan frequency.",
+                                "name": "Frequency",
+                                "parameterKey": "lidar_freq",
+                                "parameterUnit": "Hz",
+                                "parameterValue": "10",
+                                "required": true,
+                                "type": "Parameter"
+                            }
+                        ],
+                        "description": "Primary LiDAR sensor.",
+                        "name": "Lidar",
+                        "parameterKey": "",
+                        "parameterUnit": "",
+                        "parameterValue": "",
+                        "required": false,
+                        "type": "Component"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                ],
+                                "description": "IMU update rate.",
+                                "name": "UpdateRate",
+                                "parameterKey": "imu_rate",
+                                "parameterUnit": "Hz",
+                                "parameterValue": "200",
+                                "required": true,
+                                "type": "Parameter"
+                            }
+                        ],
+                        "description": "Inertial Measurement Unit.",
+                        "name": "IMU",
+                        "parameterKey": "",
+                        "parameterUnit": "",
+                        "parameterValue": "",
+                        "required": false,
+                        "type": "Component"
+                    }
+                ],
+                "description": "Sensor configuration and perception stack.",
+                "name": "Perception",
+                "parameterKey": "",
+                "parameterUnit": "",
+                "parameterValue": "",
+                "required": false,
+                "type": "Subsystem"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                ],
+                                "description": "Enable loop closure.",
+                                "name": "UseLoopClosure",
+                                "parameterKey": "loop_closure",
+                                "parameterUnit": "",
+                                "parameterValue": "false",
+                                "required": true,
+                                "type": "Parameter"
+                            },
+                            {
+                                "children": [
+                                ],
+                                "description": "Voxel filter resolution.",
+                                "name": "VoxelFilterSize",
+                                "parameterKey": "voxel_size",
+                                "parameterUnit": "m",
+                                "parameterValue": "0.1",
+                                "required": true,
+                                "type": "Parameter"
+                            }
+                        ],
+                        "description": "SLAM configuration (Cartographer-like).",
+                        "name": "SLAM",
+                        "parameterKey": "",
+                        "parameterUnit": "",
+                        "parameterValue": "",
+                        "required": false,
+                        "type": "Component"
+                    }
+                ],
+                "description": "Pose estimation system.",
+                "name": "Localisation",
+                "parameterKey": "",
+                "parameterUnit": "",
+                "parameterValue": "",
+                "required": false,
+                "type": "Subsystem"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                ],
+                                "description": "Controller loop frequency.",
+                                "name": "ControlFrequency",
+                                "parameterKey": "control_freq",
+                                "parameterUnit": "Hz",
+                                "parameterValue": "50",
+                                "required": true,
+                                "type": "Parameter"
+                            },
+                            {
+                                "children": [
+                                ],
+                                "description": "Pure pursuit lookahead distance.",
+                                "name": "LookaheadDistance",
+                                "parameterKey": "lookahead",
+                                "parameterUnit": "m",
+                                "parameterValue": "2.0",
+                                "required": true,
+                                "type": "Parameter"
+                            }
+                        ],
+                        "description": "Low-level control system.",
+                        "name": "Controller",
+                        "parameterKey": "",
+                        "parameterUnit": "",
+                        "parameterValue": "",
+                        "required": false,
+                        "type": "Component"
+                    }
+                ],
+                "description": "Path tracking and motion control.",
+                "name": "Guidance",
+                "parameterKey": "",
+                "parameterUnit": "",
+                "parameterValue": "",
+                "required": false,
+                "type": "Subsystem"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                ],
+                                "description": "DDS domain ID.",
+                                "name": "DomainID",
+                                "parameterKey": "domain_id",
+                                "parameterUnit": "",
+                                "parameterValue": "0",
+                                "required": true,
+                                "type": "Parameter"
+                            },
+                            {
+                                "children": [
+                                ],
+                                "description": "QoS profile used.",
+                                "name": "QoSProfile",
+                                "parameterKey": "qos_profile",
+                                "parameterUnit": "",
+                                "parameterValue": "sensor_data",
+                                "required": true,
+                                "type": "Parameter"
+                            }
+                        ],
+                        "description": "DDS configuration.",
+                        "name": "Middleware",
+                        "parameterKey": "",
+                        "parameterUnit": "",
+                        "parameterValue": "",
+                        "required": false,
+                        "type": "Component"
+                    }
+                ],
+                "description": "System communication settings.",
+                "name": "Communications",
+                "parameterKey": "",
+                "parameterUnit": "",
+                "parameterValue": "",
+                "required": false,
+                "type": "Subsystem"
+            }
+        ],
+        "description": "Top-level system configuration.",
+        "name": "UGLoader_Autonomy",
+        "parameterKey": "",
+        "parameterUnit": "",
+        "parameterValue": "",
+        "required": false,
+        "type": "System"
+    },
+    "version": "1.0.0"
+}
