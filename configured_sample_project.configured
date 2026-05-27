@@ -3,7 +3,7 @@
     "company": "Mining Automation Pty",
     "description": "Full autonomous underground loader system configuration including vehicle, perception, localisation, and control subsystems.",
     "gitManaged": true,
-    "lastModified": "2026-05-28T05:32:45",
+    "lastModified": "2026-05-28T05:36:37",
     "projectName": "UGLoader_Autonomy",
     "robotPlatform": "Underground Loader",
     "root": {
@@ -19,7 +19,7 @@
                                 "name": "Wheelbase",
                                 "parameterKey": "wheelbase",
                                 "parameterUnit": "m",
-                                "parameterValue": "4.5",
+                                "parameterValue": "4.6",
                                 "required": true,
                                 "type": "Parameter"
                             },
